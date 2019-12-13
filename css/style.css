@@ -6,7 +6,7 @@ html {
   }
   body {
     margin-bottom: 60px; /* Margin bottom by footer height */
-    background-color: darkslategray;
+    
   }
 
   .footer {
@@ -18,7 +18,9 @@ html {
     background-color: #f5f5f5;
   }
 
-  
+  .hero {
+    padding-top: 25%;
+  }
   
   
   /* Custom page CSS
