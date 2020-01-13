@@ -13,6 +13,10 @@ html {
     
   }
 
+  link {
+    color: #4d94e5;
+  }
+
   header {
     padding: 1em 0em 1em 0em;
     text-align: center;
