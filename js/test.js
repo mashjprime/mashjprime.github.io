@@ -38,3 +38,10 @@ function isPangram(sentence) {
   }
   return true;
 }
+
+
+function firstCharToUpper(word) {
+  // Retrieve first letter and convert to uppercase
+  let firstChar = word[0].toUpperCase();
+  return firstChar + word.slice(1);
+}
