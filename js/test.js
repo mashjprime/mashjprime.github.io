@@ -1,3 +1,4 @@
+// Validate password
 function validate(user, pass) {
   console.log(`Hi ${user} your password is: `);
   if (
@@ -11,7 +12,8 @@ function validate(user, pass) {
   }
 }
 
-function avg(numbers) {
+// Returns average of array
+function getAvg(numbers) {
   let total = 0;
   for (let num of numbers) {
     total += num;
@@ -19,6 +21,8 @@ function avg(numbers) {
   return total / numbers.length;
 }
 
+// Checks if string is pangram
+// Index of
 function issPangram(sentence) {
   let lower = sentence.toLowerCase();
   for (let char of "abcdefghijklmnopqrstuvwxyz") {
@@ -28,7 +32,7 @@ function issPangram(sentence) {
   }
   return true;
 }
-
+// vs includes
 function isPangram(sentence) {
   let lower = sentence.toLowerCase();
   for (let char of "abcdefghijklmnopqrstuvwxyz") {
@@ -39,18 +43,20 @@ function isPangram(sentence) {
   return true;
 }
 
-function firstCharToUpper(word) {
-  // Retrieve first letter and convert to uppercase
+// Retrieve first letter and convert to uppercase
+function firstCharToUpper(word) {  
   let firstChar = word[0].toUpperCase();
   return firstChar + word.slice(1);
 }
 
+// This is an object
 let temp = {
   name: "bob",
   age: 30
 };
 console.log(temp);
 
+// Generate random playing card
 function getCard() {
   const value = ['2', '3', '4', '5', '6', '7', '8', '9', '10', "J", "Q", "K", "A"];
   const suit = ["Clubs", "Spades", "Diamonds", "Hearts"];
@@ -60,7 +66,17 @@ function getCard() {
   };
 }
 
+// Generates random index from array
 function randomArray(arr) {
   let index = Math.floor(Math.random() * arr.length);
   return arr[index];
+}
+
+// Display current time and date
+function time() {
+  const today= new Date();
+  console.log(today);
+  const day = today.getDay();
+  const dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  console.log(dayList[day]);
 }
