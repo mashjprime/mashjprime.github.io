@@ -76,7 +76,26 @@ function randomArray(arr) {
 function time() {
   const today= new Date();
   console.log(today);
-  const day = today.getDay();
   const dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  console.log(dayList[day]);
+  const day = today.getDay();
+  let hours = today.getHours();
+  let minutes = today.getMinutes();
+  let seconds = today.getSeconds();
+  let amPm = 'am';
+  if (hours >= 12) {
+    amPm = 'pm';
+  }
+  if (hours > 12) {
+    hours -= 12;
+  }
+  if (minutes < 10) {
+    minutes = ('0' + minutes);
+  }
+  if (seconds < 10) {
+    seconds = ('0' + seconds);
+  }
+
+
+  console.log("Today is " + dayList[day]);
+  console.log(`The time is ${hours}:${minutes}:${seconds} ${amPm}`);
 }
