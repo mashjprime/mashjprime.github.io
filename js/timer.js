@@ -70,3 +70,8 @@ function pressButton() {
 
 console.log(localStorage.getItem("Test"));
 //localStorage.setItem("Test", "Bob");
+
+
+
+
+// Last update 1752 seconds

@@ -37,9 +37,26 @@ html {
   footer {
     position: absolute;
     bottom: 0;
-    width: available;
+    min-width: 50%;
     height: 60px; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-    color: #f5f5f5;
-    text-align: center;
+
+  }
+
+  .flexfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    width: 100%;
+  }
+
+  .leftfooter {
+   align-self: flex-start;
+   text-align: left;
+   background-color: red;
+  }
+  .rightfooter {
+    align-self: flex-end;
+    text-align: right;
+    background-color: green;
   }
