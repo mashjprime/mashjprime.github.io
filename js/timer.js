@@ -1,3 +1,7 @@
+console.log(localStorage.getItem("Test"));
+//localStorage.setItem("Test", "Bob");
+// Last update 1752 seconds
+
 // Display current time and date
 function time() {
   const today = new Date();
@@ -47,15 +51,19 @@ let end = 0;
 let total = localStorage.getItem("totalTime"); // Retrieve total from memory
 total = Number(total);
 document.getElementById("total").innerHTML = `Total: ${total} seconds`; // Display total
+let counting = false;
 
 function pressButton() {
   if (timerControl.innerHTML == "Start") {
     timerControl.innerHTML = "Stop";
+    let counting = true;
     start = Date.now();
+    //countSeconds();
   } else {
     timerControl.innerHTML = "Start";
     end = Date.now();
-    let timeElapsed = Math.floor((end - start)/1000);
+    //let counting = false;
+    let timeElapsed = Math.floor((end - start) / 1000);
     total += timeElapsed;
     //total = Math.floor(total);
 
@@ -63,15 +71,15 @@ function pressButton() {
     document.getElementById("total").innerHTML = `Total: ${total} seconds`;
   }
   localStorage.setItem("totalTime", total);
-
 }
 
+// let seconds = setInterval(countSeconds, 1000);
+// let countSec = 0;
 
-
-console.log(localStorage.getItem("Test"));
-//localStorage.setItem("Test", "Bob");
-
-
-
-
-// Last update 1752 seconds
+// function countSeconds() {
+//   if (counting) {
+//     document.getElementById("countSec").innerHTML = countSec;
+//     countSec++;
+//   }
+//   else
+// }
