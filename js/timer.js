@@ -56,21 +56,35 @@ let counting = false;
 function pressButton() {
   if (timerControl.innerHTML == "Start") {
     timerControl.innerHTML = "Stop";
-    let counting = true;
+    counting = true;
     start = Date.now();
     //countSeconds();
   } else {
     timerControl.innerHTML = "Start";
     end = Date.now();
-    //let counting = false;
+
     let timeElapsed = Math.floor((end - start) / 1000);
     total += timeElapsed;
     //total = Math.floor(total);
 
-    document.getElementById("counter").innerHTML = `Timer: ${timeElapsed}`;
+    //document.getElementById("counter").innerHTML = `Timer: ${timeElapsed}`;
+    document.getElementById("countSec").innerHTML = timeElapsed;
     document.getElementById("total").innerHTML = `Total: ${total} seconds`;
+    clearInterval(myCount);
+    value = 0;
+    counting = false;
   }
   localStorage.setItem("totalTime", total);
+}
+
+let count = setInterval(myCount, 1000);
+let value = 0;
+
+function myCount() {
+  if (counting) {
+    value++;
+    document.getElementById("countSec").innerHTML = value;
+  }
 }
 
 // let seconds = setInterval(countSeconds, 1000);
