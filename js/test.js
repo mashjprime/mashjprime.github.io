@@ -85,3 +85,12 @@ function randomArray(arr) {
   let index = Math.floor(Math.random() * arr.length);
   return arr[index];
 }
+
+
+function between(x,y) {
+  return function(num) {
+    return num >= x && num <= y;
+  }
+}
+
+const decimalPicker = between(0, 10);
